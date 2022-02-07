@@ -1,0 +1,35 @@
+{
+  "canisters": {
+    "DMD": {
+      "main": "src/DMD/main.mo",
+      "type": "motoko"
+    },
+    "DMD_assets": {
+      "dependencies": [
+        "DMD"
+      ],
+      "frontend": {
+        "entrypoint": "src/DMD_assets/src/index.html"
+      },
+      "source": [
+        "src/DMD_assets/assets",
+        "dist/DMD_assets/"
+      ],
+      "type": "assets"
+    }
+  },
+  "defaults": {
+    "build": {
+      "args": "",
+      "packtool": ""
+    }
+  },
+  "dfx": "0.9.0",
+  "networks": {
+    "local": {
+      "bind": "127.0.0.1:8000",
+      "type": "ephemeral"
+    }
+  },
+  "version": 1
+}
